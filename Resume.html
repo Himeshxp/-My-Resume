@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Himesh Kumar - Resume</title>
+  <style>
+    :root {
+  --accent: #00bcd4; 
+  --card: #0a0f2c;   
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bolder;
+}
+
+h1,h2 {
+  color: white !important;
+}
+
+ .pp{
+  color: white !important;
+ } 
+ .fp {
+  color: white !important;
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 50px;
+  padding: 2rem;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: transparent;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+nav {
+  text-align: center;
+  padding: 1.2rem;
+  background: #0a0f2c;
+  border-bottom: 2px solid #00eaff;
+  color: white;
+  font-weight: bolder;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+  z-index: 999;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.hero img {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 20px #ffffff;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  color: #00eaff;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.cardflex {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgba(10, 15, 44, 0.75);
+  color: white;
+  border: 2px solid #00eaff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00eaff;
+  transition: all ease-in-out 0.25s;
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #0a0f2c, #1a1f5c, #000c2f);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+}
+
+.card {
+  background-color: rgba(10, 15, 44, 0.75);
+  color: white;
+  border: 2px solid #00eaff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00eaff;
+  transition: all ease-in-out 0.25s;
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #002b63, #0f1d75, #000);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card:active {
+  transform: translateY(5px);
+  box-shadow: none !important;
+}
+
+.gradient-card {
+  background: linear-gradient(to bottom right, #000428, #004e92, #000);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.5);
+  border: 2px solid #00eaff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 1rem;
+  background: #0a0f2c;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+  border-top: 2px solid #00eaff;
+  color: white;
+}
+
+.info {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.u25logo {
+
+  width: 100px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+body {
+
+  background-color: rgb(0, 0, 0);
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Background Video Element -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="video.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#why">Why Me?</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="about">
+    <div class="hero-text">
+      <h1>Himesh Kumar</h1>
+      <p class="fp">College Student | B.Tech (ECE) | Development Enthusiast<br>
+        Hi there! I'm a Student who vibes with exploring new genres, building cool things, and solving problems creatively. I keep
+        learning and keep building. My Interests are in Java and HTML and CSS. ✨</p>
+    </div>
+    <img src="pfpable photo.png" alt="Profile Photo" />
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">HTML & CSS</div>
+      <div class="card">Java </div>
+      <div class="card">Graphic Designing</div>
+      <div class="card">MYSQL</div>
+      <div class="card">Python</div>
+      <div class="card">UI/UX Fundamentals</div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="cardflex">
+      <div class="card">
+        <h3>Under-Graduation</h3>
+        <p>B.Tech(2024-2028(Present)) in Electronics and Communication Engg.(ECE) from Zakir Hussain College of Engineering and Technology, AMU. 
+        </p>
+      </div>
+      <div class="card">
+        <h3>Schooling</h3>
+        <p>Class 12th from CBSE BOARD: scored 90.0%(PCM)<br> 
+          Class 10th from CBSE BOARD: scored 92.0%</p>
+      </div>
+     </div>
+    </div>
+  </section>
+
+  <!--  WHY HIRE ME  -->
+  <section id="why">
+    <div class="gradient-card">
+      <h2>Why Should You Hire Me?</h2>
+      <p class="pp">I care deeply about making stuff that looks good and works great.<br> I'm fast, curious,consistent, and
+        down to learn whatever's needed to get the job done right.<br> </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="grid">
+      <div class="card">
+        <p><strong>Email:</strong>himeshkumar562@gmail.com</p>
+        <p><strong>Phone:</strong> +91 9627190497</p>
+        <p><strong>Location:</strong>Aligarh,U.P,India</p>
+      </div>
+      <div class="card">
+        <p><strong>LinkedIn:</strong>linkedin.com/in/himeshkumar-amu</p>
+        <p><strong>GitHub:</strong> github.com/himeshxp</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="info">Himesh Kumar- Resume Website <br>
+       Under 25 Username: e/iamhim
+      </p>
+      <div>
+        <img src="https://imgs.search.brave.com/BsOd8arxH8jk4HDQHHcZe6cP-raLCSfE-PxzQGxRO88/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dW5kZXIyNXVuaXZl/cnNlLmNvbS9zdGF0/aWMvdW5pdmVyc2VB/c3NldHMvaW1nL3Uy/NUxvZ28uM2Y5ZWUy/Y2VkMDliLnBuZw" class="u25logo" alt="under25-logo">
+      </div>
+  </footer>
+
+</body>
+
+</html>
